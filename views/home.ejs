@@ -1,0 +1,11 @@
+<%- include ("partials/header") %>
+<h1>Home</h1>
+<p><%= homeStartContent %></p>
+<% let x =homeCompose.map(a => a.title) %>
+<% let y =homeCompose.map(a => a.para) %>
+<% for( let i = 0; i < x.length; i++ ) { %>
+    <h1><%=x[i]%></h1>
+    <p><%=y[i]%> ...<a href=<%="http://localhost:3000/posts/" + homeLinks[i] %>> read more</a></p>
+    <% console.log(x[i]) %>
+<% } %>
+<%- include("partials/footer") %>

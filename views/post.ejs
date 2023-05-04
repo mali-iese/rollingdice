@@ -1,0 +1,14 @@
+<%- include ("partials/header") %>
+<% console.log(homeCompose); %>
+<% let x =homeCompose.map(a => a.title) %>
+<% let y =homeCompose.map(a => a.para) %>
+<% for( let i = 0; i < x.length; i++ ) { %>
+
+    <% if (reqTitle==homeLinks[i]){%>
+    <h1><%=x[i]%></h1>
+     <p><%=y[i] %></p>
+    <% }  %>
+         
+    
+    <% } %>
+<%- include ("partials/footer") %>
